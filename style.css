@@ -1,5 +1,6 @@
 .weather-app {
   margin: 10em auto;
+  margin-bottom: 0;
   max-width: 40em;
   max-height: 40em;
   overflow: hidden;
@@ -60,7 +61,7 @@
 
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 3em;
   font-weight: 400;
   line-height: 1;
 }
@@ -75,7 +76,7 @@
 }
 
 .main-icon {
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
 }
 
@@ -99,4 +100,15 @@
   flex-direction: column;
   text-align: center;
   width: 20%;
+}
+.open-source-link {
+  text-decoration: none;
+}
+
+.footer {
+  margin: 0 auto;
+  max-width: 40em;
+  max-height: 40em;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
 }
