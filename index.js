@@ -1,9 +1,6 @@
 // Global variables
 let apiKey = "2a122bfa0ff88e4ce25877a315e47c8f";
-let mainIcon = `
-    <i class="main-icon fa-solid fa-sun"></i>
-  `;
-document.querySelector(".main-icon-div").innerHTML = mainIcon;
+let mainWeatherIcon = document.querySelector("#icon");
 
 function formatDate(date) {
   let hours = date.getHours();
@@ -69,7 +66,13 @@ function displayWeatherCondition(response) {
     "p.city-name"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country} `;
 
-  // Change the main icon
+  // Changing the main icon and alt text
+  mainWeatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  mainWeatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(enterCity) {
@@ -113,9 +116,4 @@ searchCity("Brisbane");
 //     let cTemp = Math.round(temperature);
 //     let fTemp = Math.round((temperature * 9) / 5 + 32);
 //   }
-// }
-
-// function showIcon(response) {
-//   let mainIncon = document.querySelector(".main-icon");
-//   mainIncon.innerHTML = response.data.weather[0].icon;
 // }
