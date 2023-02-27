@@ -30,20 +30,23 @@
     <div class="container-md weather-app">
       <img class="image" src="images/sky.jpeg" alt="sky image" />
 
-      <div class="input-and-location">
+      <form class="input-and-location">
         <input
-          type="text"
+          type="search"
           id="enter-city"
           class="form-control enter-city"
           placeholder="Enter the city"
         />
-        <button type="button" class="btn btn-info" id="search-location-btn">
-          Search
-        </button>
+        <input
+          type="submit"
+          value="Search"
+          class="btn btn-info"
+          id="search-location-btn"
+        />
         <button type="button" class="btn btn-warning" id="current-location-btn">
           Current Location
         </button>
-      </div>
+      </form>
 
       <div class="city-name-and-image-block">
         <div class="city-date-icon">
