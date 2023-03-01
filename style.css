@@ -106,6 +106,10 @@
   padding-right: 0.2;
 }
 
+.forecast-icon {
+  width: 3.5em;
+}
+
 .open-source-link {
   text-decoration: none;
 }
