@@ -119,7 +119,7 @@ function displayWeatherCondition(response) {
   // Changing the main icon and alt text
   mainWeatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   mainWeatherIcon.setAttribute("alt", response.data.weather[0].description);
 
