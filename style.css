@@ -85,22 +85,27 @@
   padding: 1.2em 0.5 1.2em 1.2em;
 }
 
-.forecast-for-the-week {
+/* .forecast-for-the-week {
   display: flex;
   justify-content: center;
   padding: 1.2em;
-}
+} */
 
-.day-icon {
-  font-size: 2em;
-}
-
-.days {
-  display: flex;
-  flex-direction: column;
+.forecast-for-the-week {
+  padding: 1.2em;
   text-align: center;
-  width: 20%;
+  color: #000;
 }
+
+.weather-forecast-temp-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temp {
+  font-size: 0.9em;
+  padding-right: 0.2;
+}
+
 .open-source-link {
   text-decoration: none;
 }

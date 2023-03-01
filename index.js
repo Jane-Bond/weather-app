@@ -56,6 +56,31 @@ function getMonthAndDay(date) {
 }
 currentDay.innerHTML = getMonthAndDay(currentTime);
 
+//Display Forecast functionality
+function displayForcast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let daysShort = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  daysShort.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+          <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
+          <div class="weather-forecast-temp">
+            <span class="weather-forecast-temp-max"> +12°C </span>
+            <div class="vr"></div>
+            <span class="weather-forecast-temp-min"> +2°C </span> 
+          </div>
+        </div>  
+    `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Feature Show Temperature
 function displayWeatherCondition(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -73,6 +98,8 @@ function displayWeatherCondition(response) {
   );
 
   mainWeatherIcon.setAttribute("alt", response.data.weather[0].description);
+
+  displayForcast();
 }
 
 function searchCity(enterCity) {
