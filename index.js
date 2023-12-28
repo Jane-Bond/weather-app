@@ -156,15 +156,3 @@ let curLocationBtn = document.querySelector("#current-location-btn");
 curLocationBtn.addEventListener("click", getCurrentLocation);
 
 searchCity("Brisbane");
-
-// function enterCity() {
-//   let city = prompt("Enter a city?");
-
-//   if (weather[city] !== undefined) {
-//     city = city.toLowerCase();
-//     let temperature = weather[city].temp;
-//     let humidity = weather[city].humidity;
-//     let cTemp = Math.round(temperature);
-//     let fTemp = Math.round((temperature * 9) / 5 + 32);
-//   }
-// }
