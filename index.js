@@ -1,6 +1,6 @@
 // Global variables
 let apiKey = "2a122bfa0ff88e4ce25877a315e47c8f";
-// let apiKey = "d9803dcae6ab8b9fd76b5768bdafc19f"; commit to test
+// let apiKey = "d9803dcae6ab8b9fd76b5768bdafc19f";
 let mainWeatherIcon = document.querySelector("#icon");
 
 function formatDate(date) {
